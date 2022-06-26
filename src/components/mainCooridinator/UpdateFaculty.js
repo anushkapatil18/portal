@@ -101,6 +101,14 @@ const UpdateFaculty = () => {
     setContacts(newContacts);
   };
 
+  const handleSetEntries = (e) => {
+    if(Number(e.target.value)>0){
+      setUserPerPage(Number(e.target.value));
+    }
+    else if(Number(e.target.value)<=0){
+      setUserPerPage(6);
+    }
+  }
   return (
     <>
     <div className="flex items-center justify-center mt-22 sm:mt-10">
@@ -109,7 +117,7 @@ const UpdateFaculty = () => {
             <div className="overflow-hidden">
       <form onSubmit={handleEditFormSubmit}>
         <div className="text-sm px-4 py-2 text-right">
-          Show Entries &nbsp;<input className="border w-10" type="number"  onChange={(e) => setUserPerPage(Number(e.target.value))}/>
+          Show Entries &nbsp;<input className="border w-10" type="number"  onChange={(e) => handleSetEntries(e)}/>
         </div>
         <table className=" rounded-md text-center px-6 py-4 whitespace-nowrap">
           <thead>
