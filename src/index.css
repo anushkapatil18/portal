@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.navbar-brand{
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    float: left;
+}
+.nav-col{
+    background-color: #0083CA;
+}
+.flex{
+    flex-direction: row-reverse;
+}

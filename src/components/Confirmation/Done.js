@@ -7,7 +7,6 @@ export default function DonePage({setOpenModal}) {
   let navigate = useNavigate();
   const CloseModal = () => {
     setOpenModal(false);
-    navigate('/')
   }
   return (
     <>

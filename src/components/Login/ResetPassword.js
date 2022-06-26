@@ -1,5 +1,6 @@
 import React,{useState,Axios} from 'react';
 import Done from '../Confirmation/Done';
+import {useNavigate} from 'react-router-dom';
 
 function ResetPassword () {
   //modal 
@@ -17,12 +18,8 @@ function ResetPassword () {
     console.log(username,password,email,otp)
     const data=await Axios(url,{username,password,email,otp});
     console.log(data)
-    setUsername('')
-    setPassword('')
-    setEmail('')
-    setOtp('')
    }
-
+   let navigate = useNavigate();
     return  (
     <>
     <div className="flex items-center justify-center mt-32 sm:mt-20">
@@ -39,7 +36,7 @@ function ResetPassword () {
                     </td>
                     <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
                       <input placeholder='Username' className='border' id='username' name='username' 
-                    onChange={ (e)=>setUsername(e.target.value)} value={username} required/>
+                    onChange={ (e)=>setUsername(e.target.value)} value={username} />
                     </td>
                   </tr>
                   <tr className="bg-white">
@@ -49,7 +46,7 @@ function ResetPassword () {
                     </td>
                     <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
                     <input type="password" placeholder='Password' className='border'id='password' name='password' 
-                    onChange={(e)=>setPassword(e.target.value)} value={password} required/>
+                    onChange={(e)=>setPassword(e.target.value)} value={password} />
                     </td>
                   </tr>
                   <tr className="bg-white ">
@@ -59,7 +56,7 @@ function ResetPassword () {
                     </td>
                     <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
                     <input type="email" placeholder='Email Id' className='border' id='email' name='email'
-                    onChange={(e)=>setEmail(e.target.value)} value={email} required/>
+                    onChange={(e)=>setEmail(e.target.value)} value={email} />
                     </td>
                   </tr>
 
@@ -70,7 +67,7 @@ function ResetPassword () {
                     </td>
                     <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
                     <input placeholder='OTP' className='border' id='otp' name='otp' 
-                    onChange={(e)=>setOtp(e.target.value) } value={otp} required/>
+                    onChange={(e)=>setOtp(e.target.value) } value={otp} />
                     </td>
                   </tr>
                   <tr className="bg-white ">
@@ -78,10 +75,10 @@ function ResetPassword () {
                     <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
                       
                     <button type='submit' className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" onClick={() => setOpenModal(true)} >&#10003;&nbsp;Confirm</button>
-                      {openModal && otp && <Done setOpenModal={setOpenModal}/>}
+                      {openModal && username && password && email && otp && <Done setOpenModal={setOpenModal}/>}
                     </td>
                     <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
-                    <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" >&#9747;&nbsp;Cancel</button>
+                    <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" onClick={() => navigate('/')}>&#9747;&nbsp;Cancel</button>
 
                     </td>
                   </tr>

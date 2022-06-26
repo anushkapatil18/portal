@@ -14,35 +14,18 @@ function Navbar() {
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
                   <Link
-                    to="/resetpassword"
+                    to="/resetPassword"
                     className="text-white px-3 py-2 rounded-md text-sm font-medium"
                   > 
                     Reset Password
                   </Link>
                   <Link
-                    to="/displaycourse"
-                    className="text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Display Project Course
-                  </Link>
-                  <Link
-                    to="/updatefaculty"
-                    className="text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Update/Delete Faculty List
-                  </Link>
-                  <Link
-                    to="/displayfaculty"
+                    to="/approvals"
                     className=" text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
-                    Display Faculty List
+                    Approvals
                   </Link>
-                  <Link
-                    to="/insertfaculty"
-                    className=" text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Insert Faculty List
-                  </Link>
+                 
                 </div>
               </div>
             </div>
@@ -74,40 +57,15 @@ function Navbar() {
           {(ref) => (
             <div className="md:hidden" id="mobile-menu">
               <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <Link
-                    to="/insertfaculty"
+              
+
+                  <Link
+                    to="/approvals"
                     className=" text-white block px-3 py-2 rounded-md text-sm font-medium"
                   >
-                    Insert Faculty List
+                    Approvals
                   </Link>
 
-                  <Link
-                    to="/displayfaculty"
-                    className=" text-white block px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Display Faculty List
-                  </Link>
-
-                  <Link
-                    to="/updatefaculty"
-                    className="text-white block px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Update/Delete Faculty List
-                  </Link>
-
-                  <Link
-                    to="/displaycourse"
-                    className="text-white block px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Display Project Course
-                  </Link>
-
-                  <Link
-                    to="/"
-                    className="text-white block px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Circulars
-                  </Link>
                   <Link
                     to="/resetpassword"
                     className="text-white block px-3 py-2 rounded-md text-sm font-medium"
