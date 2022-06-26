@@ -162,10 +162,6 @@ const UpdateFaculty = () => {
         disabledClassName={"paginationDisabled"}
         activeClassName={"paginationActive"}
       /> 
-      {/*<div className="justify-center ml-76 items-end text-right text-sm">
-        <button className="border bg-slate-300 px-4 py-2 mt-2 hover:bg-slate-500 rounded-md" onClick={() => previousPage()}>Previous</button>
-        <button className="border bg-slate-300  px-4 py-2 mt-2 hover:bg-slate-500 rounded-md" onClick={() => nextPage()}>Next</button>
-      </div>*/}
     </div>
     </div>
     </div>
