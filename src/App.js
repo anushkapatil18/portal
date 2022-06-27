@@ -6,6 +6,7 @@ import UpdateFaculty from './components/mainCooridinator/UpdateFaculty';
 import DisplayCourse from './components/mainCooridinator/DisplayCourse';
 import ProjectAllocation from './components/mainCooridinator/ProjectAllocation';
 import ResetPassword from './components/Login/ResetPassword';
+import Otp from './components/Login/otp';
 import Login from './components/Login/login';
 import Circular from './components/Circular';
 import {BrowserRouter as Router, Routes,Route, Navigate} from 'react-router-dom';
@@ -25,6 +26,7 @@ function App() {
                 <Route exact path="/resetPassword" element={<ResetPassword />} />
                 <Route exact path="/projectAllocation" element={<ProjectAllocation />} />
                 <Route exact path="/circular" element={<Circular />} />
+                <Route exact path="/otp" element={<Otp />} />
                 <Route  path="*" element={<Circular />} />
                 
       </Routes>
