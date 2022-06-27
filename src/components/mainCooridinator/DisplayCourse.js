@@ -189,13 +189,13 @@ const [course,setCourse]=useState('')*/}
         {
           userSearchData && userSearchData.length > 0 ?
         
-        userSearchData.slice(pagesVisited, pagesVisited + usersPerPage).map((contact,i) => (
+        userSearchData.slice(pagesVisited, pagesVisited + usersPerPage).map((user,i) => (
           
           <tr className="border-b" key={i}>
-          <td className="text-sm text-black px-4 py-2 whitespace-nowrap border-b border-r border-l">{contact.school}</td>
-          <td className="text-sm text-black px-4 py-2 whitespace-nowrap border-b border-r">{contact.year}</td>
-          <td className="text-sm text-black px-4 py-2 whitespace-nowrap border-b border-r">{contact.sem}</td>
-          <td className="text-sm text-black px-4 py-2 whitespace-nowrap border-b border-r">{contact.course}</td>
+          <td className="text-sm text-black px-4 py-2 whitespace-nowrap border-b border-r border-l">{user.school}</td>
+          <td className="text-sm text-black px-4 py-2 whitespace-nowrap border-b border-r">{user.year}</td>
+          <td className="text-sm text-black px-4 py-2 whitespace-nowrap border-b border-r">{user.sem}</td>
+          <td className="text-sm text-black px-4 py-2 whitespace-nowrap border-b border-r">{user.course}</td>
           </tr>
         )) : 'NO DATA'
       }

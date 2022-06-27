@@ -2,7 +2,7 @@ import React from 'react'
 
 function InsertFaculty() {
   return (
-    <div>InsertFaculty</div>
+    <div>InsertFcaulty</div>
   )
 }
 
