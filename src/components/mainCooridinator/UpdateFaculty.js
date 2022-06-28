@@ -128,6 +128,7 @@ const UpdateFaculty = () => {
               <th className="px-4 py-2 rounded-tr-md">Actions</th>
             </tr>
           </thead>
+ {contacts && contacts.length > 0 ? 
           <tbody className="border-br rounded-md">
             {contacts.slice(pagesVisited, pagesVisited + usersPerPage).map((contact) => (
               <Fragment>
@@ -148,7 +149,7 @@ const UpdateFaculty = () => {
                   )}
               </Fragment>
             ))}
-          </tbody>
+          </tbody> : 'NO DATA' }
         </table>
       </form>
       <ReactPaginate
