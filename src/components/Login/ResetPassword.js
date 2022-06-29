@@ -15,7 +15,7 @@ function ResetPassword () {
     const url="";
     console.log(username,opassword,npassword,email)
     //const data=await Axios(url,{username,opassword,npassword,email});
-    if(email != null && npassword!= null && npassword != opassword){
+    if(email != null && npassword!= null && npassword !== opassword){
       navigate("/otp");
     }
    }
@@ -75,10 +75,10 @@ function ResetPassword () {
                     
                     <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
                       
-                  <button type="submit" className="bg-[#0083CA] text-white font-bold ml-8 py-1.5 px-6 rounded-md" >Submit</button>
+                  <button type="submit" className="bg-[#0083CA] hover:bg-blue-700 text-white font-bold ml-8 py-1.5 px-6 rounded-md" >Submit</button>
                     </td>
                     <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
-                   <button  className="bg-[#0083CA] text-white font-bold ml-8 py-1.5 px-6 rounded-md" onClick={(e) => navigate("/")} >Reset</button>
+                   <button  className="bg-[#0083CA] hover:bg-blue-700 text-white font-bold ml-8 py-1.5 px-6 rounded-md" onClick={(e) => navigate("/")} >Reset</button>
 
                     </td>
                   </tr>
@@ -92,6 +92,7 @@ function ResetPassword () {
           
         </div>
       </div>
+      
     </>
   ) 
 }

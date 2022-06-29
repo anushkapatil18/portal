@@ -161,7 +161,7 @@ const [course,setCourse]=useState('')*/}
                     
                     <div className="text-lg text-black px-6 py-6 whitespace-nowrap flex flex-col justify-center items-center">
                       
-                      <button className="bg-[#0083CA] text-white font-bold ml-8 py-1.5 px-6 rounded-md" onClick={(e) => HandleReset(e)} >Reset</button>
+                      <button className="bg-[#0083CA] hover:bg-blue-700 text-white font-bold ml-8 py-1.5 px-6 rounded-md" onClick={(e) => HandleReset(e)} >Reset</button>
                       </div>
         <div className="flex items-center justify-center  w-full">
     

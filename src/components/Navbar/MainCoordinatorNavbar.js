@@ -38,7 +38,7 @@ function Navbar() {
                     Display Faculty 
                   </Link>
                   <Link
-                    to="/insertFaculty"
+                    to="/assignSubcordinator"
                     className=" text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
                     Insert Faculty

@@ -26,7 +26,7 @@ function ProjectAllocation () {
    
     return  (
     <>
-    <div className="flex items-center justify-center mt-5">
+    <div className="flex items-center justify-center mt-20">
         <div className="overflow-y-auto sm:-mx-6 lg:-mx-8 ">
           <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8 ">
             <div className="overflow-hidden">
@@ -39,7 +39,7 @@ function ProjectAllocation () {
                       <label htmlFor='year'>Year</label>
                     </td>
                     <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
-                      <select placeholder='Year' className='border block w-40 ' id='year' name='year' 
+                      <select placeholder='Year' className='border block w-60 ' id='year' name='year' 
                     onChange={ (e)=>setyear(e.target.value)} value={year} >
                       <option value="">-SELECT-</option>
                       <option value="2021">2021</option>
@@ -56,7 +56,7 @@ function ProjectAllocation () {
                     <label htmlFor='semester'>Semester</label>
                     </td>
                     <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
-                    <select type="semester" placeholder='Semester' className='border block w-40 'id='semester' name='semester' 
+                    <select type="semester" placeholder='Semester' className='border block w-60 'id='semester' name='semester' 
                     onChange={(e)=>setsem(e.target.value)} value={semester} >
                       <option value="">-SELECT-</option>
                       <option value="Fall Sem">Fall Sem</option>
@@ -71,7 +71,7 @@ function ProjectAllocation () {
                     <label htmlFor='school'>School</label>
                     </td>
                     <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
-                    <select type="school" placeholder='School' className='border block w-40 'id='school' name='school' 
+                    <select type="school" placeholder='School' className='border block w-60 'id='school' name='school' 
                     onChange={(e)=>setschool(e.target.value)} value={school} >
                       <option value="">-SELECT-</option>
                       <option value="SCOPE">SCOPE</option>
@@ -86,7 +86,7 @@ function ProjectAllocation () {
                     <label htmlFor='course'>Course</label>
                     </td>
                     <td className="text-lg text-gray-900 font-light block px-6 py-4 whitespace-nowrap ">
-                    <select type="course" placeholder='Course' className='border block w-40 ' id='course' name='course'
+                    <select type="course" placeholder='Course' className='border block w-60 ' id='course' name='course'
                     onChange={(e)=>setcourse(e.target.value)} value={course} >
                       <option value="">-SELECT-</option>
                       <option value="CSE1001">CSE1001</option>
@@ -101,7 +101,7 @@ function ProjectAllocation () {
                     <label htmlFor='ptype'>Project Type</label>
                     </td>
                     <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
-                    <select type="ptype" placeholder='Project Type' className='border block w-40  ' id='ptype' name='ptype'
+                    <select type="ptype" placeholder='Project Type' className='border block w-60  ' id='ptype' name='ptype'
                     onChange={(e)=>setType(e.target.value)} value={ptype} >
                       <option value="">-SELECT-</option>
                       <option value="InHouse">In House</option>
@@ -115,7 +115,7 @@ function ProjectAllocation () {
                     <label htmlFor='team'>Team/Individual</label>
                     </td>
                     <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
-                    <select type="team" placeholder='Team' className='border block w-40  ' id='team' name='team'
+                    <select type="team" placeholder='Team' className='border block w-60  ' id='team' name='team'
                     onChange={(e)=>setTeam(e.target.value)} value={team} >
                       <option value="">-SELECT-</option>
                       <option value="Team">Team</option>

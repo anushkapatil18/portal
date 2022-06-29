@@ -26,7 +26,13 @@ function Navbar() {
                     Publish Marks
                   </Link>
                   <Link
-                    to="/addCircular"
+                    to="/marksPath"
+                    className=" text-white px-3 py-2 rounded-md text-sm font-medium"
+                  >
+                    Marks Configuration
+                  </Link>
+                  <Link
+                    to="/addCirculars"
                     className=" text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
                     Add Circulars
@@ -75,8 +81,14 @@ function Navbar() {
                   >
                     Insert Registered Student
                   </Link>
+                  <Link
+                    to="/marksPath"
+                    className=" text-white px-3 py-2 rounded-md text-sm font-medium"
+                  >
+                    Marks Configuration
+                  </Link>
               <Link
-                    to="/addCircular"
+                    to="/addCirculars"
                     className=" text-white block px-3 py-2 rounded-md text-sm font-medium"
                   >
                     Add Circulars
@@ -90,7 +102,7 @@ function Navbar() {
                   </Link>
 
                   <Link
-                    to="/resetpassword"
+                    to="/resetPassword"
                     className="text-white block px-3 py-2 rounded-md text-sm font-medium"
                   > 
                     Reset Password
