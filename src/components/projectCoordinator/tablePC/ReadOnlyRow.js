@@ -6,6 +6,7 @@ const ReadOnlyRow = ({ contact, handleEditClick, handleDeleteClick }) => {
       <td className="text-sm text-black px-4 py-2 whitespace-nowrap border-b border-r border-l">{contact.eid}</td>
       <td className="text-sm text-black px-4 py-2 whitespace-nowrap border-b border-r">{contact.name}</td>
       <td className="text-sm text-black px-4 py-2 whitespace-nowrap border-b border-r">{contact.marks}</td>
+      <td className="text-sm text-black px-4 py-2 whitespace-nowrap border-b border-r">{contact.panel_no}</td>
       <td className="text-sm text-black px-6 py-4 whitespace-nowrap border-b border-r">
         <button
           type="button"

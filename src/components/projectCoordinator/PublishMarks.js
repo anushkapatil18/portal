@@ -74,6 +74,7 @@ const PublishMarks = () => {
               <th className="px-4 py-2  rounded-tl-md">Employee ID</th>
               <th className="px-4 py-2  ">Name</th>
               <th className="px-4 py-2 ">Marks</th>
+              <th className="px-4 py-2 ">Panel no</th>
               <th className="px-4 py-2 rounded-tr-md">Actions</th>
             </tr>
           </thead>

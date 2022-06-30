@@ -3,8 +3,11 @@ import data from "./table/mock-data.json";
 import { nanoid } from "nanoid";
 import EditableRow from "./table/EditableRow";
 import ReadOnlyRow from "./table/ReadOnlyRow";
+import Done from "../../Confirmation/Done";
 
 const MarkDist = () => {
+  //modal 
+  let [openModal, setOpenModal] = useState(false);
   const [contacts, setContacts] = useState(data);
   const [addFormData, setAddFormData] = useState({
     type: "",
@@ -153,12 +156,24 @@ const MarkDist = () => {
           </div>
         </div>
   </div>*/}
-      <div className="flex items-center justify-center mt-10 w-full">
+   <div className="flex flex-col items-center justify-center w-full mt-10">
+                
+                <select className="px-4 py-2 border w-60">
+                  <option value="">-SELECT-</option>
+                  <option value="review1">Review 1</option>
+                  <option value="review2">Review 2</option>
+                  <option value="review3">Review 3</option>
+
+                </select>
+                <label className="px-4 py-2">Review</label>
+              </div>
+      <div className="flex items-center justify-center mt-5 w-full">
         <div className="overflow-y-auto sm:-mx-6 lg:-mx-8 ">
           <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8 ">
             <div className="overflow-hidden">
+             
               <form onSubmit={handleAddFormSubmit}>
-                <table className=" rounded-md text-center px-6 py-4 whitespace-nowrap">
+                <table className="mt-10 rounded-md text-center px-6 py-4 whitespace-nowrap">
                   <thead>
                     <tr className=" nav-col text-white text-lg">
                       <th className="px-4 py-2  rounded-tl-md">
@@ -277,6 +292,13 @@ const MarkDist = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="flex block justify-center items-center mt-2 mb-1">
+      <p className=" flex text-red-700 ">This will freeze the rubrics</p></div>
+      <div className="flex block justify-center items-center mt-2 mb-5">
+        
+      <button type='submit' className=" nav-col hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md" onClick={() => setOpenModal(true)} >Submit</button>
+                      {openModal && <Done setOpenModal={setOpenModal}/>}
       </div>
     </>
   );

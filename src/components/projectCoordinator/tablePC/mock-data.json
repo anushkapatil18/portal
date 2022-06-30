@@ -3,37 +3,43 @@
       "id": 1,
       "eid": "MH-1234567890",
       "name": "ABCD EFGHIGHKL MNOPR STUVW XYZ",
-      "marks": "YES"
+      "marks": "YES",
+      "panel_no":"12345"
     },
     {
       "id": 2,
       "eid": "MH-1234567890",
       "name": "ABCD EFGHIGHKL MNOPR STUVW XYZ",
-      "marks": "No"
+      "marks": "No",
+      "panel_no":"12345"
     },
     {
       "id": 3,
       "eid": "MH-1234567890",
       "name": "ABCD EFGHIGHKL MNOPR STUVW XYZ",
-      "marks": "YES"
+      "marks": "YES",
+      "panel_no":"12345"
     },
     {
       "id": 4,
       "eid": "MH-1234567890",
       "name": "ABCD EFGHIGHKL MNOPR STUVW XYZ",
-      "marks": "YES"
+      "marks": "YES",
+      "panel_no":"12345"
     },
     {
       "id": 5,
       "eid": "MH-1234567890",
       "name": "ABCD EFGHIGHKL MNOPR STUVW XYZ",
-      "marks": "YES"
+      "marks": "YES",
+      "panel_no":"12345"
     },
     {
       "id": 6,
       "eid": "MH-1234567890",
       "name": "ABCD EFGHIGHKL MNOPR STUVW XYZ",
-      "marks": "No"
+      "marks": "No",
+      "panel_no":"12345"
     }
     
    
