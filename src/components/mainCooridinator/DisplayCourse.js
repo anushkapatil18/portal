@@ -1,9 +1,11 @@
 import React,{useEffect, useState} from 'react';
 import ReactPaginate from "react-paginate";
+import axios from 'axios';
 
 function DisplayCourse() {
   const [courses,setCourses] = useState([]);
   const [userSearchData,setUserSearchData] = useState([]);
+  const [schools,setSchools] = useState([]);
  { /*const [school,setSchool]=useState('')
   const [year,setYear]=useState('')
   const [sem,setSem]=useState('')
@@ -18,6 +20,10 @@ const [course,setCourse]=useState('')*/}
   };
 
   useEffect(() => {
+    axios.get('https://capstone-heroku-portal.herokuapp.com/school')
+      .then((res) => {
+        setSchools(res.data);
+      })
       const data = [
         {school:"SITE", year:"2021",sem:"Fall",course:"Btech"},
         {school:"SITE", year:"2020",sem:"Winter",course:"Mtech"},
@@ -110,10 +116,12 @@ const [course,setCourse]=useState('')*/}
             </td>
             <td className="text-lg text-black-900 font-light px-6 py-4 whitespace-nowrap ">
             <select className='border w-32' onChange={ (e)=>HandleSchool(e)} required>
-            <option value="">-SELECT-</option>
-            <option value="SITE">SITE</option>
-            <option value="SCOPE">SCOPE</option>
-            <option value="SELECT">SELECT</option>
+            <option value="" disabled selected>--Select--</option>
+                    {
+                      schools.map((val, index)=>{
+                        return (<option value={val.code} key={val.code}>{val.code}</option>)
+                      })
+                    }
             </select>
             </td>
             

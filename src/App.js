@@ -18,12 +18,22 @@ import ResetPassword from './components/Login/ResetPassword';
 import Otp from './components/Login/otp';
 import Login from './components/Login/login';
 import {BrowserRouter as Router, Routes,Route} from 'react-router-dom';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
   return (
     <>
 
-     {/* <Router >
+<Router>
+  <Navbar />
+  <Routes>
+  <Route exact path="/" element={<Login />} />
+  </Routes>
+  </Router>
+
+
+
+   {/* <Router >
       <MainCoordinatorNavbar />
       <Routes>
                 <Route exact path="/" element={<Login />} />
@@ -37,10 +47,10 @@ function App() {
                 <Route exact path="/otp" element={<Otp />} />
                 
       </Routes>
-  </Router>*/}
+  </Router> */}
    
 
-  <Router>
+  {/*<Router>
         <ProjectCoordinatorNavbar />
         <Routes>
         <Route exact path="/" element={<Login />} />
@@ -52,7 +62,7 @@ function App() {
         <Route exact path="/marksPath" element={<Selection />} />
         <Route exact path="/marksconfiguration" element={<MarkDist />} />
         </Routes>
-  </Router>
+  </Router>*/}
  
   </> 
   );

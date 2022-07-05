@@ -1,7 +1,8 @@
 import React from 'react'
-import { useState } from 'react';
-import xlsx, { readFile, utils } from 'xlsx';
-import {CSVLink , CSVDownload} from "react-csv";
+import { useState,useEffect} from 'react';
+import  { readFile, utils } from 'xlsx';
+import {CSVLink} from "react-csv";
+import axios from 'axios';
 // import DownloadIcon from '@mui/icons-material/Download';
 
 
@@ -12,10 +13,17 @@ const InsertFaculty = () => {
 
   const initialValues = { Year:"" , Semester:"", Course:""};
   const [formValues, setFormValues] = useState(initialValues);
-  const [isSubmit, setIsSubmit] = useState(false);
+ const [isSubmit, setIsSubmit] = useState(false);
 
-  const [FileName , setFileName] = useState(null);
-
+const [FileName , setFileName] = useState(null);
+  const [schools,setSchools] = useState([]);
+ 
+ 
+  useEffect(() => {
+    axios.get('https://capstone-heroku-portal.herokuapp.com/school')
+      .then((res) => {
+        setSchools(res.data);
+      })})
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -81,40 +89,18 @@ const InsertFaculty = () => {
         <div className="overflow-y-auto sm:-mx-6 lg:-mx-8 ">
           <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8">
             <div className="overflow-hidden">
-
-    {/* <section className="container flex flex-col items-center justify-center h-screen relative w-screen"> */}
-
-    {/*<pre>{JSON.stringify(formValues, undefined, 2)}</pre> */}
-
-
-    {/* <form onSubmit={handleSubmit} className="flex flex-col items-center justify-center relative text-center w-4/5 h-screen/2"> */}
       <form onSubmit={handleSubmit} className="items-center justify-center text-center ">
       <table className="min-w-full text-center sm:text-sm ">
         <tbody>
 
-        {/* <div className="ui divider"></div> */}
-        {/* <div className="ui form"> */}
 
 
-        <tr>
+      {/*  <tr>
                       <td className="text-lg text-black px-6 py-4 whitespace-nowrap">
                         <label htmlFor="Year">Year</label>
                       </td>
                       <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
-                        {/* <select
-                          className="block w-full border border-black required"
-                          name="Year"
-                          onChange={(e) => setYear(e.target.value)}
-                          value={Year}
-                        >
-                          <option value="" disabled={true}>
-                            Select Year
-                          </option> */}
-
-
-        {/* <div className="field  mb-7 mr-1"> */}
-            {/* <label className='m-2.5'>Year</label> */}
-            {/* <select className='border border-black' name="Year" value={formValues.Year} onChange={handleChange}> */}
+                      
             <select className="block w-6/12 border required" name="Year" value={formValues.Year} onChange={handleChange}>
             <option value="">-SELECT-</option>
             <option value="2020">2020</option>
@@ -126,7 +112,6 @@ const InsertFaculty = () => {
                 <option value="2026">2026</option>
                 <option value="2027">2027</option>
             </select>
-          {/* </div> */}
           </td>
           </tr>
 
@@ -136,9 +121,7 @@ const InsertFaculty = () => {
                         <label htmlFor="Semester">Semester</label>
                       </td>
                       <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
-          {/* <div className="field  mb-7 mr-1"> */}
-            {/* <label className='m-2.5'>Semester</label> */}
-            {/* <select className='border border-black' name="Semester" value={formValues.Semester} onChange={handleChange}> */}
+       
             <select className='block w-6/12 border  required' name="Semester" value={formValues.Semester} onChange={handleChange}>
             <option value="">-SELECT-</option>
                 <option value="1">1</option>
@@ -150,24 +133,24 @@ const InsertFaculty = () => {
                 <option value="7">7</option>
                 <option value="8">8</option>
             </select>
-          {/* </div> */}
   </td>
-</tr>
+  </tr> */}
 
 
 <tr>
   <td className="text-lg text-black px-6 py-4 whitespace-nowrap">
-                        <label htmlFor="Course">Course</label>
+                        <label htmlFor="Course">School Code</label>
                       </td>
                       <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
-          {/* <div className="field  mb-7 mr-1"> */}
-            {/* <label className='m-2.5'>Course</label>
-            <select className='border border-black' name="Course" value={formValues.Course} onChange={handleChange}> */}
+          
             <select className='block w-6/12 border  required' name="Course" value={formValues.Course} onChange={handleChange}>
-            <option value="">-SELECT-</option>
-            <option value="Web Tech">Web Tech</option>
+            <option value="" disabled selected>--Select--</option>
+                    {
+                      schools.map((val, index)=>{
+                        return (<option value={val.code} key={val.code}>{val.code}</option>)
+                      })
+                    }
             </select>
-          {/* </div>   */}
   </td>
 </tr>
 <tr>
@@ -178,11 +161,11 @@ const InsertFaculty = () => {
           {/* <div className="field  mb-7 mr-1"> */}
             {/* <label className='m-2.5'>Course</label>
             <select className='border border-black' name="Course" value={formValues.Course} onChange={handleChange}> */}
-            <input className='block w-6/12  required inline' name="filename" type="file" id="myFile" onChange={(e)=> handleFileAsync(e)} ></input>
+            <input className='block w-9/12  required inline' name="filename" type="file" id="myFile" onChange={(e)=> handleFileAsync(e)} ></input>
             {/* </td>
             <td> */}
             &nbsp;&nbsp;&nbsp;
-            <CSVLink {...csvReport} className="text-blue-600 underline items-left inline">&#10515;Template</CSVLink>
+            <CSVLink {...csvReport} className="text-blue-600 underline">&#10515;Template</CSVLink>
             </td>
           {/* </div>   */}
   {/* </td> */}

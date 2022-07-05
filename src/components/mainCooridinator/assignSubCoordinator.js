@@ -32,7 +32,7 @@ const AssignSubCoordinator = () => {
               onSubmit={(e)=> handleSubmit(e) }>
               <table className="min-w-full text-center sm:text-sm">
                 <tbody>
-                  <tr>
+                  {/*<tr>
                     <td className="text-lg text-black px-6 py-4 whitespace-nowrap">
                       <label htmlFor='Year'>Year</label>
                     </td>
@@ -49,12 +49,12 @@ const AssignSubCoordinator = () => {
                 <option value="2027">2027</option>
             </select>
                     </td>
-                  </tr>
+  </tr>*/}
                   
                   <tr className="bg-white">
                     
                     <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
-                    <label htmlFor='Semester'>Semester</label>
+                    <label htmlFor='Semester'>Progarm Id</label>
                     </td>
                     <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
                     <select className='border w-60'  name="Semester" value={formValues.Semester} onChange={handleChange}>
@@ -73,7 +73,7 @@ const AssignSubCoordinator = () => {
                   <tr className="bg-white">
                     
                     <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
-                    <label htmlFor='School'>School</label>
+                    <label htmlFor='School'>Employee Id</label>
                     </td>
                     <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
                     <select className='border w-60'  name="School" value={formValues.School} onChange={handleChange}>                
@@ -83,7 +83,7 @@ const AssignSubCoordinator = () => {
             </select>
                     </td>
                   </tr>
-                  <tr className="bg-white ">
+                 {/* <tr className="bg-white ">
                     
                     <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
                     <label htmlFor='Course'>Course</label>
@@ -94,7 +94,7 @@ const AssignSubCoordinator = () => {
             <option value="Web Tech">Web Tech</option>
             </select>
                     </td>
-                  </tr>
+</tr> */}
                   <tr className="bg-white ">
                     
                     <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">

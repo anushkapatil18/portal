@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 .navbar-brand{
     color: white;
     font-size: larger;
@@ -13,3 +14,4 @@
 .flex{
     flex-direction: row-reverse;
 }
+
