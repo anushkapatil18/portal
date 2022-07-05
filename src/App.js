@@ -19,6 +19,8 @@ import Otp from './components/Login/otp';
 import Login from './components/Login/login';
 import {BrowserRouter as Router, Routes,Route} from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
+import HomeCaps from './components/HomePage/HomeCaps';
+import Employee from './components/HomePage/Employee';
 
 function App() {
   return (
@@ -27,7 +29,9 @@ function App() {
 <Router>
   <Navbar />
   <Routes>
-  <Route exact path="/" element={<Login />} />
+    <Route exact path="/" element={<Login />}/>
+  <Route exact path="/home" element={<HomeCaps />} />
+  <Route export path="/employee" element={<Employee />}/>
   </Routes>
   </Router>
 
