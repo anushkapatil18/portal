@@ -47,7 +47,7 @@ function Navbar() {
                     to="/circular"
                     className=" text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
-                    Cirdular 
+                    Circular 
                   </Link>
                 </div>
               </div>

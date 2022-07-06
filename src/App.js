@@ -26,18 +26,18 @@ function App() {
   return (
     <>
 
-<Router>
+{/*<Router>
   <Navbar />
   <Routes>
     <Route exact path="/" element={<Login />}/>
   <Route exact path="/home" element={<HomeCaps />} />
   <Route export path="/employee" element={<Employee />}/>
   </Routes>
-  </Router>
+  </Router>*/}
 
 
 
-   {/* <Router >
+  {/* <Router >
       <MainCoordinatorNavbar />
       <Routes>
                 <Route exact path="/" element={<Login />} />
@@ -51,10 +51,10 @@ function App() {
                 <Route exact path="/otp" element={<Otp />} />
                 
       </Routes>
-  </Router> */}
+</Router> */}
    
 
-  {/*<Router>
+  <Router>
         <ProjectCoordinatorNavbar />
         <Routes>
         <Route exact path="/" element={<Login />} />
@@ -66,7 +66,7 @@ function App() {
         <Route exact path="/marksPath" element={<Selection />} />
         <Route exact path="/marksconfiguration" element={<MarkDist />} />
         </Routes>
-  </Router>*/}
+  </Router>
  
   </> 
   );
