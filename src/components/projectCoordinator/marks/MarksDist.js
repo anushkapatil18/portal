@@ -118,7 +118,7 @@ const MarkDist = () => {
             <div className="overflow-hidden">
               <table className=" rounded-md text-center px-6 py-4 whitespace-nowrap">
                 <thead>
-                  <tr className=" nav-col text-white text-lg">
+                  <tr className=" nav-col text-white text-sm">
                     <th className="px-4 py-2  rounded-tl-md">Review</th>
                     <th className="px-4 py-2 rounded-tr-md">
                       Max Marks to ALlocate
@@ -159,13 +159,12 @@ const MarkDist = () => {
    <div className="flex flex-col items-center justify-center w-full mt-10">
                 
                 <select className="px-4 py-2 border w-60">
-                  <option value="">-SELECT-</option>
+                  <option value="">-REVIEW-</option>
                   <option value="review1">Review 1</option>
                   <option value="review2">Review 2</option>
                   <option value="review3">Review 3</option>
 
                 </select>
-                <label className="px-4 py-2">Review</label>
               </div>
       <div className="flex items-center justify-center mt-5 w-full">
         <div className="overflow-y-auto sm:-mx-6 lg:-mx-8 ">
@@ -175,7 +174,7 @@ const MarkDist = () => {
               <form onSubmit={handleAddFormSubmit}>
                 <table className="mt-10 rounded-md text-center px-6 py-4 whitespace-nowrap">
                   <thead>
-                    <tr className=" nav-col text-white text-lg">
+                    <tr className=" nav-col text-white text-sm">
                       <th className="px-4 py-2  rounded-tl-md">
                         *Assessment Type
                       </th>
@@ -264,7 +263,7 @@ const MarkDist = () => {
               <form onSubmit={handleEditFormSubmit}>
                 <table className=" rounded-md text-center px-6 py-4 whitespace-nowrap">
                   <thead>
-                    <tr className=" nav-col text-white text-lg">
+                    <tr className=" nav-col text-white text-sm">
                       <th className="px-4 py-2  rounded-tl-md">
                         *Assessment Type
                       </th>

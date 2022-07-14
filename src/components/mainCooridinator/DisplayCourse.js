@@ -111,10 +111,10 @@ const [course,setCourse]=useState('')*/}
       <table className="min-w-full text-center sm:text-sm">
         <tbody>
           <tr>
-            <td className="text-lg text-black px-6 py-4 whitespace-nowrap">
+            <td className="text-sm text-black px-6 py-4 whitespace-nowrap">
               <label htmlFor='school'>School</label>
             </td>
-            <td className="text-lg text-black-900 font-light px-6 py-4 whitespace-nowrap ">
+            <td className="text-sm text-black-900 font-light px-6 py-4 whitespace-nowrap ">
             <select className='border w-32' onChange={ (e)=>HandleSchool(e)} required>
             <option value="" disabled selected>--Select--</option>
                     {
@@ -125,10 +125,10 @@ const [course,setCourse]=useState('')*/}
             </select>
             </td>
             
-            <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
+            <td className="text-sm text-black px-6 py-4 whitespace-nowrap ">
             <label htmlFor='year'>From Year</label>
             </td>
-            <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
+            <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
             <select className='border w-32'  onChange={ (e)=>HandleYear(e)}  required>
             <option value="">-SELECT-</option>
             <option value="2020">2020</option>
@@ -138,10 +138,10 @@ const [course,setCourse]=useState('')*/}
             </td>
             </tr>
             <tr>
-            <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
+            <td className="text-sm text-black px-6 py-4 whitespace-nowrap ">
             <label htmlFor='sem'>Semester</label>
             </td>
-            <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
+            <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
             <select className='border w-32'  onChange={ (e)=>HandleSem(e)}  required>
             <option value="">-SELECT-</option>
             <option value="Fall">Fall</option>
@@ -150,10 +150,10 @@ const [course,setCourse]=useState('')*/}
             </select>
             </td>
             
-            <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
+            <td className="text-sm text-black px-6 py-4 whitespace-nowrap ">
             <label htmlFor='course'>Course</label>
             </td>
-            <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
+            <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
             <select className='border w-32'  onChange={ (e)=>HandleCourse(e)} required>
             <option value="">-SELECT-</option>
             <option value="Btech">Btech</option>
@@ -167,7 +167,7 @@ const [course,setCourse]=useState('')*/}
           </div>
           </div></div></div>
                     
-                    <div className="text-lg text-black px-6 py-6 whitespace-nowrap flex flex-col justify-center items-center">
+                    <div className="text-sm text-black px-6 py-6 whitespace-nowrap flex flex-col justify-center items-center">
                       
                       <button className="bg-[#0083CA] hover:bg-blue-700 text-white font-bold ml-8 py-1.5 px-6 rounded-md" onClick={(e) => HandleReset(e)} >Reset</button>
                       </div>
@@ -186,7 +186,7 @@ const [course,setCourse]=useState('')*/}
     </div>
     <table className=" rounded-md text-center px-6 py-4 whitespace-nowrap">
       <thead>
-        <tr className=" nav-col text-white text-lg">
+        <tr className=" nav-col text-white text-sm">
           <th className="px-4 py-2  rounded-tl-md">School</th>
           <th className="px-4 py-2  ">Year</th>
           <th className="px-4 py-2  ">Semester</th>

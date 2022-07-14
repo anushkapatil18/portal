@@ -28,10 +28,10 @@ function AddCircular () {
               <table className="min-w-full text-center sm:text-sm">
                 <tbody>
                   <tr>
-                    <td className="text-lg text-black px-6 py-4 whitespace-nowrap">
+                    <td className="text-sm text-black px-6 py-4 whitespace-nowrap">
                       <label htmlFor='year'>Year</label>
                     </td>
-                    <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
                       <select placeholder='Year' className='border block w-60' id='year' name='year' 
                     onChange={ (e)=>setyear(e.target.value)} value={year} >
                         <option value="">-SELECT-</option>
@@ -45,10 +45,10 @@ function AddCircular () {
                   </tr>
                   <tr className="bg-white">
                     
-                    <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-black px-6 py-4 whitespace-nowrap ">
                     <label htmlFor='semester'>Semester</label>
                     </td>
-                    <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
                     <select type="semester" placeholder='Semester' className='border block w-60'id='semester' name='semester' 
                     onChange={(e)=>setsem(e.target.value)} value={semester} >
                         <option value="">-SELECT-</option>
@@ -59,10 +59,10 @@ function AddCircular () {
                   </tr>
                   <tr className="bg-white ">
                     
-                    <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-black px-6 py-4 whitespace-nowrap ">
                     <label htmlFor='course'>Course</label>
                     </td>
-                    <td className="text-lg text-gray-900 font-light block px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-gray-900 font-light block px-6 py-4 whitespace-nowrap ">
                     <select type="course" placeholder='Course' className='border block w-60' id='course' name='course'
                     onChange={(e)=>setcourse(e.target.value)} value={course} >
                         <option value="">-SELECT-</option>
@@ -75,10 +75,10 @@ function AddCircular () {
 
                   <tr className="bg-white ">
                     
-                    <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-black px-6 py-4 whitespace-nowrap ">
                     <label htmlFor='circular'>Circular</label>
                     </td>
-                    <td className="text-lg text-gray-900 font-light px-4 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap ">
                     <input type="file" placeholder='Circular' className=' w-60' id='circular' name='circular' 
                     onChange={(e)=>setcircular(e.target.value) } value={circular} />
                       
@@ -93,7 +93,7 @@ function AddCircular () {
             </div>
             
           </div>
-         <div className="flex items-center justify-center bg-white text-lg text-black">
+         <div className="flex items-center justify-center bg-white text-sm text-black">
                       
                       <button type='submit' className=" nav-col hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md" onClick={() => setOpenModal(true)} >Submit</button>
                       {openModal && <Done setOpenModal={setOpenModal}/>}

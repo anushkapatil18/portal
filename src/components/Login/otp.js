@@ -25,7 +25,7 @@ function Otp () {
             
           <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8 ">
             <div className="overflow-hidden">
-            <h1 className="flex items-center justify-center text-4xl bold mb-2">Enter the OTP sent to your email id</h1>
+            <h1 className="flex items-center justify-center text-2xl bold mb-2">Enter the OTP sent to your email id</h1>
               <form action="post" 
               onSubmit={(e)=> Handle(e) }>
               <table className="min-w-full text-center sm:text-sm">
@@ -33,22 +33,22 @@ function Otp () {
 
                   <tr className="bg-gray-200">
                     
-                    <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-black px-6 py-4 whitespace-nowrap ">
                     <label htmlFor='otp'>OTP</label>
                     </td>
-                    <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
                     <input placeholder='OTP' className='border' id='otp' name='otp' 
                     onChange={(e)=>setOtp(e.target.value) } value={otp} />
                     </td>
                   </tr>
                   <tr className="bg-white ">
                     
-                    <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-black px-6 py-4 whitespace-nowrap ">
                       
                     <button type='submit' className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"  >&#10003;&nbsp;Confirm</button>
                       {openModal && otp && <Done setOpenModal={setOpenModal}/>}
                     </td>
-                    <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-black px-6 py-4 whitespace-nowrap ">
                     <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" onClick={() => navigate('/')}>&#9747;&nbsp;Cancel</button>
 
                     </td>

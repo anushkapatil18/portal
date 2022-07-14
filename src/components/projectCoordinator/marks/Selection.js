@@ -35,10 +35,10 @@ function Selection() {
                 <table className="min-w-full text-center sm:text-sm">
                   <tbody>
                     <tr>
-                      <td className="text-lg text-black px-6 py-4 whitespace-nowrap">
+                      <td className="text-sm text-black px-6 py-4 whitespace-nowrap">
                         <label htmlFor="Year">Year</label>
                       </td>
-                      <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
+                      <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
                         <select
                           className="block w-full border  required"
                           name="Year"
@@ -57,10 +57,10 @@ function Selection() {
                       </td>
                     </tr>
                     <tr className="bg-white">
-                      <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
+                      <td className="text-sm text-black px-6 py-4 whitespace-nowrap ">
                         <label htmlFor="Semester">Semester</label>
                       </td>
-                      <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
+                      <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
                         <select
                           className="block w-full border  w-full"
                           name="Semester"
@@ -76,10 +76,10 @@ function Selection() {
                       </td>
                     </tr>
                     <tr className="bg-white ">
-                      <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
+                      <td className="text-sm text-black px-6 py-4 whitespace-nowrap ">
                         <label htmlFor="Course">Course</label>
                       </td>
-                      <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
+                      <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
                         <select
                           className="block w-full border "
                           name="Course"
@@ -95,10 +95,10 @@ function Selection() {
                     </tr>
 
                     <tr className="bg-white">
-                      <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
+                      <td className="text-sm text-black px-6 py-4 whitespace-nowrap ">
                         <label htmlFor="Project">Project Type</label>
                       </td>
-                      <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
+                      <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
                         <select
                           className="block w-full border"
                           name="Project"
@@ -116,10 +116,10 @@ function Selection() {
                       </td>
                     </tr>
                     <tr className="bg-white">
-                      <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
+                      <td className="text-sm text-black px-6 py-4 whitespace-nowrap ">
                         <label htmlFor="Review">Number of Reviews</label>
                       </td>
-                      <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
+                      <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
                         <input
                           placeholder="Reviews"
                           className="black border"
@@ -131,7 +131,7 @@ function Selection() {
                         </td>
                         </tr>
                     <tr className="bg-white ">
-                      <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
+                      <td className="text-sm text-black px-6 py-4 whitespace-nowrap ">
                         <button
                           type="submit"
                           className="nav-col hover:bg-blue-500 text-white font-bold py-2 px-4 rounded"
@@ -140,7 +140,7 @@ function Selection() {
                         </button>
                        
                       </td>
-                      <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
+                      <td className="text-sm text-black px-6 py-4 whitespace-nowrap ">
                         <button
                           className="nav-col hover:bg-blue-500 text-white font-bold py-2 px-4 rounded"
                           onClick={(e) => HandleReset(e)}

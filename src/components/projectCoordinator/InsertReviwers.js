@@ -90,7 +90,7 @@ const [FileName , setFileName] = useState(null);
           <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8">
             <div className="overflow-hidden">
       <form onSubmit={handleSubmit} className="items-center justify-center text-center ">
-      <table className="min-w-full text-center sm:text-sm ">
+      <table className="min-w-full text-center text-sm ">
         <tbody>
 
 

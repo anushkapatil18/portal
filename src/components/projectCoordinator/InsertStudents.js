@@ -34,8 +34,8 @@ const InsertStudents = () => {
   ]
 
   const headers = [
-    {label:'Employee ID' , key:'Reg_no'},
-    {label:'Faculty Name' , key:'Student_Name'},
+    {label:'Reg No' , key:'Reg_no'},
+    {label:'Student Name' , key:'Student_Name'},
     {label:'Email ID' , key:'Email_ID'}
   ];
 
@@ -93,10 +93,10 @@ const InsertStudents = () => {
 
 
         <tr>
-        <td className="text-lg text-black px-6 py-4 whitespace-nowrap">
+        <td className="text-sm text-black px-6 py-4 whitespace-nowrap">
                         <label htmlFor="Year">Year</label>
                       </td>
-                      <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
+                      <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
                         
             <select className=" w-60 border" name="Year" value={formValues.Year} onChange={handleChange}>
             <option value="">-SELECT-</option>
@@ -114,10 +114,10 @@ const InsertStudents = () => {
 
 
 <tr>
-<td className="text-lg text-black px-6 py-4 whitespace-nowrap">
+<td className="text-sm text-black px-6 py-4 whitespace-nowrap">
                         <label htmlFor="Semester">Semester</label>
                       </td>
-                      <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
+                      <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
          
             <select className=' w-60 border ' name="Semester" value={formValues.Semester} onChange={handleChange}>
             <option value="">-SELECT-</option>
@@ -135,10 +135,10 @@ const InsertStudents = () => {
 
 
 <tr>
-<td className="text-lg text-black px-6 py-4 whitespace-nowrap">
+<td className="text-sm text-black px-6 py-4 whitespace-nowrap">
                         <label htmlFor="Course">Course</label>
                       </td>
-                      <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
+                      <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
           
             <select className=' w-60 border ' name="Course" value={formValues.Course} onChange={handleChange}>
             <option value="">-SELECT-</option>
@@ -147,10 +147,10 @@ const InsertStudents = () => {
   </td>
 </tr>
 <tr>
-  <td className="text-lg text-black px-6 py-4 whitespace-nowrap">
+  <td className="text-sm text-black px-6 py-4 whitespace-nowrap">
                         <label htmlFor="upload">Upload File</label>
                       </td>
-                      <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
+                      <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
         
             <input className='w-40' name="filename" type="file" id="myFile" onChange={(e)=> handleFileAsync(e)} ></input>
            
@@ -173,7 +173,7 @@ const InsertStudents = () => {
     </div>
     </div>
     <div className='flex items-center justify-center'> 
-<button type='submit' className=" nav-col text-lg hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md" >Submit</button>
+<button type='submit' className=" nav-col text-sm hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md" >Submit</button>
 </div>
     </div>
     </div>

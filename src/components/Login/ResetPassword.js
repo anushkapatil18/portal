@@ -32,10 +32,10 @@ function ResetPassword () {
               <table className="min-w-full text-center sm:text-sm">
                 <tbody>
                   <tr>
-                    <td className="text-lg text-black px-6 py-4 whitespace-nowrap">
+                    <td className="text-sm text-black px-6 py-4 whitespace-nowrap">
                       <label htmlFor='username'>Username</label>
                     </td>
-                    <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
                       <input placeholder='Username' className='border' id='username' name='username' 
                     onChange={ (e)=>setUsername(e.target.value)} value={username} />
                     </td>
@@ -43,41 +43,41 @@ function ResetPassword () {
                   
                   <tr className="bg-white">
                     
-                    <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-black px-6 py-4 whitespace-nowrap ">
                     <label htmlFor='password'>Old Password</label>
                     </td>
-                    <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
                     <input type="password" placeholder='Password' className='border'id='password' name='password' 
                     onChange={(e)=>setOPassword(e.target.value)} value={opassword} />
                     </td>
                   </tr>
                   <tr className="bg-white">
                     
-                    <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-black px-6 py-4 whitespace-nowrap ">
                     <label htmlFor='password'>New Password</label>
                     </td>
-                    <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
                     <input type="password" placeholder='Password' className='border'id='password' name='password' 
                     onChange={(e)=>setNPassword(e.target.value)} value={npassword} required />
                     </td>
                   </tr>
                   <tr className="bg-white ">
                     
-                    <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-black px-6 py-4 whitespace-nowrap ">
                     <label htmlFor='email'>Email Id</label>
                     </td>
-                    <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
                     <input type="email" placeholder='Email Id' className='border' id='email' name='email'
                     onChange={(e)=>setEmail(e.target.value)} value={email} required/>
                     </td>
                   </tr>
                   <tr className="bg-white ">
                     
-                    <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-black px-6 py-4 whitespace-nowrap ">
                       
                   <button type="submit" className="bg-[#0083CA] hover:bg-blue-700 text-white font-bold ml-8 py-1.5 px-6 rounded-md" >Submit</button>
                     </td>
-                    <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-black px-6 py-4 whitespace-nowrap ">
                    <button  className="bg-[#0083CA] hover:bg-blue-700 text-white font-bold ml-8 py-1.5 px-6 rounded-md" onClick={(e) => navigate("/")} >Reset</button>
 
                     </td>

@@ -33,10 +33,10 @@ const AssignSubCoordinator = () => {
               <table className="min-w-full text-center sm:text-sm">
                 <tbody>
                   {/*<tr>
-                    <td className="text-lg text-black px-6 py-4 whitespace-nowrap">
+                    <td className="text-sm text-black px-6 py-4 whitespace-nowrap">
                       <label htmlFor='Year'>Year</label>
                     </td>
-                    <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
                     <select className='border w-60' name="Year" value={formValues.Year} onChange={handleChange}>
             <option value="">-SELECT-</option>
             <option value="2020">2020</option>
@@ -53,10 +53,10 @@ const AssignSubCoordinator = () => {
                   
                   <tr className="bg-white">
                     
-                    <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-black px-6 py-4 whitespace-nowrap ">
                     <label htmlFor='Semester'>Progarm Id</label>
                     </td>
-                    <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
                     <select className='border w-60'  name="Semester" value={formValues.Semester} onChange={handleChange}>
             <option value="">-SELECT-</option>
                 <option value="1">1</option>
@@ -72,10 +72,10 @@ const AssignSubCoordinator = () => {
                   </tr>
                   <tr className="bg-white">
                     
-                    <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-black px-6 py-4 whitespace-nowrap ">
                     <label htmlFor='School'>Employee Id</label>
                     </td>
-                    <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
                     <select className='border w-60'  name="School" value={formValues.School} onChange={handleChange}>                
             <option value="">-SELECT-</option>
             <option value="SITE">SITE</option>
@@ -85,10 +85,10 @@ const AssignSubCoordinator = () => {
                   </tr>
                  {/* <tr className="bg-white ">
                     
-                    <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-black px-6 py-4 whitespace-nowrap ">
                     <label htmlFor='Course'>Course</label>
                     </td>
-                    <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
                     <select className='border w-60'  name="Course" value={formValues.Course} onChange={handleChange}>
             <option value="">-SELECT-</option>
             <option value="Web Tech">Web Tech</option>
@@ -97,10 +97,10 @@ const AssignSubCoordinator = () => {
 </tr> */}
                   <tr className="bg-white ">
                     
-                    <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-black px-6 py-4 whitespace-nowrap ">
                     <label htmlFor='username'>Username</label>
                     </td>
-                    <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
                     <input className='border w-60' 
               type="text"
               name="username"
@@ -112,10 +112,10 @@ const AssignSubCoordinator = () => {
                   </tr>
                   <tr className="bg-white ">
                     
-                    <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-black px-6 py-4 whitespace-nowrap ">
                     <label htmlFor='password'>Password</label>
                     </td>
-                    <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
                     <input className='border pass w-60'
               type="password"
               name="password"
@@ -128,11 +128,11 @@ const AssignSubCoordinator = () => {
 
                   <tr className="bg-white ">
                     
-                    <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-black px-6 py-4 whitespace-nowrap ">
                       
                   <button type="submit" className="bg-[#0083CA] hover:bg-blue-700 text-white font-bold ml-8 py-1.5 px-6 rounded-md" >Submit</button>
                     </td>
-                    <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-black px-6 py-4 whitespace-nowrap ">
                    <button  className="bg-[#0083CA] hover:bg-blue-700 text-white font-bold ml-8 py-1.5 px-6 rounded-md" onClick={(e) => navigate("/")} >Reset</button>
 
                     </td>

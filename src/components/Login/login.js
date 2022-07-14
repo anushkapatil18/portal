@@ -23,7 +23,7 @@ return (
         
         <div className='h-1/10 text-center'>
            
-            <div className='text-center w-full items-center'>
+            <div className='text-center w-full items-center text-sm'>
                 <form className='w-5/5 bg-white rounded-none' >
                 
                     <div className="input-field divname">

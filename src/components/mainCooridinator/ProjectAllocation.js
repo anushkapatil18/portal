@@ -35,10 +35,10 @@ function ProjectAllocation () {
               <table className="min-w-full text-center sm:text-sm">
                 <tbody>
                   <tr>
-                    <td className="text-lg text-black px-6 py-4 whitespace-nowrap">
+                    <td className="text-sm text-black px-6 py-4 whitespace-nowrap">
                       <label htmlFor='year'>Year</label>
                     </td>
-                    <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
                       <select placeholder='Year' className='border block w-60 ' id='year' name='year' 
                     onChange={ (e)=>setyear(e.target.value)} value={year} >
                       <option value="">-SELECT-</option>
@@ -52,10 +52,10 @@ function ProjectAllocation () {
                   </tr>
                   <tr className="bg-white">
                     
-                    <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-black px-6 py-4 whitespace-nowrap ">
                     <label htmlFor='semester'>Semester</label>
                     </td>
-                    <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
                     <select type="semester" placeholder='Semester' className='border block w-60 'id='semester' name='semester' 
                     onChange={(e)=>setsem(e.target.value)} value={semester} >
                       <option value="">-SELECT-</option>
@@ -67,10 +67,10 @@ function ProjectAllocation () {
                   </tr>
                   <tr className="bg-white">
                     
-                    <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-black px-6 py-4 whitespace-nowrap ">
                     <label htmlFor='school'>School</label>
                     </td>
-                    <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
                     <select type="school" placeholder='School' className='border block w-60 'id='school' name='school' 
                     onChange={(e)=>setschool(e.target.value)} value={school} >
                       <option value="">-SELECT-</option>
@@ -82,10 +82,10 @@ function ProjectAllocation () {
                   </tr>
                   <tr className="bg-white ">
                     
-                    <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-black px-6 py-4 whitespace-nowrap ">
                     <label htmlFor='course'>Course</label>
                     </td>
-                    <td className="text-lg text-gray-900 font-light block px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-gray-900 font-light block px-6 py-4 whitespace-nowrap ">
                     <select type="course" placeholder='Course' className='border block w-60 ' id='course' name='course'
                     onChange={(e)=>setcourse(e.target.value)} value={course} >
                       <option value="">-SELECT-</option>
@@ -97,10 +97,10 @@ function ProjectAllocation () {
                   </tr>
                   <tr className="bg-white ">
                     
-                    <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-black px-6 py-4 whitespace-nowrap ">
                     <label htmlFor='ptype'>Project Type</label>
                     </td>
-                    <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
                     <select type="ptype" placeholder='Project Type' className='border block w-60  ' id='ptype' name='ptype'
                     onChange={(e)=>setType(e.target.value)} value={ptype} >
                       <option value="">-SELECT-</option>
@@ -111,10 +111,10 @@ function ProjectAllocation () {
                   </tr>
                   <tr className="bg-white ">
                     
-                    <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-black px-6 py-4 whitespace-nowrap ">
                     <label htmlFor='team'>Team/Individual</label>
                     </td>
-                    <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
                     <select type="team" placeholder='Team' className='border block w-60  ' id='team' name='team'
                     onChange={(e)=>setTeam(e.target.value)} value={team} >
                       <option value="">-SELECT-</option>
@@ -124,11 +124,11 @@ function ProjectAllocation () {
                     </td>
                   </tr>
                   <tr className="bg-white">
-                    <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-black px-6 py-4 whitespace-nowrap ">
                     <button type='submit' className=" nav-col hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={() => setOpenModal(true)} >Submit</button>
                     {openModal && <Done setOpenModal={setOpenModal}/>}
                     </td>
-                    <td className="text-lg text-black px-6 py-4 whitespace-nowrap ">
+                    <td className="text-sm text-black px-6 py-4 whitespace-nowrap ">
                     <button type='submit' className=" nav-col hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={(e) =>  HandleReset(e)} >Reset</button>
                     </td>
                   </tr>
