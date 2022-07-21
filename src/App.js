@@ -29,7 +29,7 @@ function App() {
   return (
     <>
 {/*HOME PAGE */}
-<Router>
+{/*<Router>
   <Navbar />
   <Routes>
     <Route exact path="/" element={<Login />}/>
@@ -37,7 +37,7 @@ function App() {
   <Route export path="/employee" element={<Employee />}/>
   <Route export path="*" element={<Error />}/>
   </Routes>
-  </Router>
+  </Router> */}
 
 
 {/*MAINCOORDINATOR */}
@@ -59,7 +59,7 @@ function App() {
 </Router>  */}
    
 {/*PROJECT COORDINATOR */}
-  {/*<Router>
+  <Router>
         <ProjectCoordinatorNavbar />
         <Routes>
         <Route exact path="/" element={<Login />} />
@@ -74,7 +74,7 @@ function App() {
         <Route exact path="/marksconfiguration" element={<MarkDist />} />
          <Route export path="*" element={<Error />}/>
         </Routes>
-</Router>*/}
+</Router> 
  
   </> 
   );

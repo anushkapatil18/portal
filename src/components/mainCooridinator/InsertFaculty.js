@@ -37,14 +37,15 @@ const [FileName , setFileName] = useState(null);
 
 
   const dataa=[
-    {Employee_ID:"" , Faculty_Name:"" ,Email_ID:"" },
-    {Employee_ID:"" , Faculty_Name:"" ,Email_ID:"" } 
+    {Employee_ID:"" , Faculty_Name:"" ,Email_ID:"",School_Code:"" },
+    {Employee_ID:"" , Faculty_Name:"" ,Email_ID:"",School_Code:""  } 
   ]
 
   const headers = [
     {label:'Employee ID' , key:'Employee_ID'},
     {label:'Faculty Name' , key:'Faculty_Name'},
-    {label:'Email ID' , key:'Email_ID'}
+    {label:'Email ID' , key:'Email_ID'},
+    {label:'School Code',key:'School_Code'}
   ];
 
   const csvReport = {
@@ -89,6 +90,7 @@ const [FileName , setFileName] = useState(null);
         <div className="overflow-y-auto sm:-mx-6 lg:-mx-8 ">
           <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8">
             <div className="overflow-hidden">
+              <h1 className="flex items-center justify-center font-bold text-2xl">Insert Faculty</h1><br/><br/>
       <form onSubmit={handleSubmit} className="items-center justify-center text-center ">
       <table className="min-w-full text-center sm:text-sm ">
         <tbody>
@@ -137,7 +139,7 @@ const [FileName , setFileName] = useState(null);
   </tr> */}
 
 
-<tr>
+{/*<tr>
   <td className="text-sm text-black px-6 py-4 whitespace-nowrap">
                         <label htmlFor="Course">School Code</label>
                       </td>
@@ -152,7 +154,7 @@ const [FileName , setFileName] = useState(null);
                     }
             </select>
   </td>
-</tr>
+</tr>*/}
 <tr>
   <td className="text-sm text-black px-6 py-4 whitespace-nowrap">
                         <label htmlFor="upload">Upload File</label>

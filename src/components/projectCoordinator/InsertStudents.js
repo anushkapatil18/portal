@@ -1,7 +1,8 @@
 import React from 'react'
-import { useState } from 'react';
-import xlsx, { readFile, utils } from 'xlsx';
-import {CSVLink , CSVDownload} from "react-csv";
+import { useState,useEffect} from 'react';
+import  { readFile, utils } from 'xlsx';
+import {CSVLink} from "react-csv";
+import axios from 'axios';
 // import DownloadIcon from '@mui/icons-material/Download';
 
 
@@ -12,10 +13,17 @@ const InsertStudents = () => {
 
   const initialValues = { Year:"" , Semester:"", Course:""};
   const [formValues, setFormValues] = useState(initialValues);
-  const [isSubmit, setIsSubmit] = useState(false);
+ const [isSubmit, setIsSubmit] = useState(false);
 
-  const [FileName , setFileName] = useState(null);
-
+const [FileName , setFileName] = useState(null);
+  const [schools,setSchools] = useState([]);
+ 
+ 
+  useEffect(() => {
+    axios.get('https://capstone-heroku-portal.herokuapp.com/school')
+      .then((res) => {
+        setSchools(res.data);
+      })})
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -29,16 +37,18 @@ const InsertStudents = () => {
 
 
   const dataa=[
-    {Reg_no:"" , Student_Name:"" ,Email_ID:"" },
-    {Reg_no:"" , Student_Name:"" ,Email_ID:"" } 
+    {Reg_no:"" , Student_Name:"" ,Email_ID:"",Year:"",Semester:"",Course:"" },
+    {Reg_no:"" , Student_Name:"" ,Email_ID:"",Year:"",Semester:"",Course:"" } 
   ]
 
   const headers = [
     {label:'Reg No' , key:'Reg_no'},
     {label:'Student Name' , key:'Student_Name'},
-    {label:'Email ID' , key:'Email_ID'}
+    {label:'Email ID' , key:'Email_ID'},
+    {label:'Year', key:"Year"},
+    {label:"Semester", key:"Semester"},
+    {label:"Course",key:"Course"}
   ];
-
   const csvReport = {
     filename : 'file.csv',
     headers : headers ,
@@ -61,8 +71,8 @@ const InsertStudents = () => {
     console.log(jsonData);
 
   // const headers = [
-  //   {label:'Reg_no' , key:'Reg_no'},
-  //   {label:'Student_Name' , key:'Student_Name'},
+  //   {label:'Employee_ID' , key:'Employee_ID'},
+  //   {label:'Faculty_Name' , key:'Faculty_Name'},
   //   {label:'Email_ID' , key:'Email_ID'}
   // ];
 
@@ -78,27 +88,23 @@ const InsertStudents = () => {
 
 
     <div className="flex items-center justify-center mt-32 sm:mt-20">
-    <div className="overflow-y-auto sm:-mx-6 lg:-mx-8 ">
-      <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8 ">
-        <div className="overflow-hidden">
-   
-
-    {/*<pre>{JSON.stringify(formValues, undefined, 2)}</pre> */}
-
-
-    
-      <form onSubmit={handleSubmit}>
-      <table className="min-w-full text-center sm:text-sm">
+        <div className="overflow-y-auto sm:-mx-6 lg:-mx-8 ">
+          <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+            <div className="overflow-hidden">
+            <h1 className="flex items-center justify-center font-bold text-2xl">Insert Students</h1><br/><br/>
+      <form onSubmit={handleSubmit} className="items-center justify-center text-center ">
+      <table className="min-w-full text-center text-sm ">
         <tbody>
 
 
-        <tr>
-        <td className="text-sm text-black px-6 py-4 whitespace-nowrap">
+
+      {/*  <tr>
+                      <td className="text-sm text-black px-6 py-4 whitespace-nowrap">
                         <label htmlFor="Year">Year</label>
                       </td>
                       <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
-                        
-            <select className=" w-60 border" name="Year" value={formValues.Year} onChange={handleChange}>
+                      
+            <select className="block w-6/12 border required" name="Year" value={formValues.Year} onChange={handleChange}>
             <option value="">-SELECT-</option>
             <option value="2020">2020</option>
                 <option value="2021">2021</option>
@@ -114,12 +120,12 @@ const InsertStudents = () => {
 
 
 <tr>
-<td className="text-sm text-black px-6 py-4 whitespace-nowrap">
+  <td className="text-sm text-black px-6 py-4 whitespace-nowrap">
                         <label htmlFor="Semester">Semester</label>
                       </td>
                       <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
-         
-            <select className=' w-60 border ' name="Semester" value={formValues.Semester} onChange={handleChange}>
+       
+            <select className='block w-6/12 border  required' name="Semester" value={formValues.Semester} onChange={handleChange}>
             <option value="">-SELECT-</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -131,54 +137,77 @@ const InsertStudents = () => {
                 <option value="8">8</option>
             </select>
   </td>
-</tr>
+  </tr> */}
 
 
-<tr>
-<td className="text-sm text-black px-6 py-4 whitespace-nowrap">
-                        <label htmlFor="Course">Course</label>
+{/*<tr>
+  <td className="text-sm text-black px-6 py-4 whitespace-nowrap">
+                        <label htmlFor="Course">School Code</label>
                       </td>
                       <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
           
-            <select className=' w-60 border ' name="Course" value={formValues.Course} onChange={handleChange}>
-            <option value="">-SELECT-</option>
-            <option value="Web Tech">Web Tech</option>
+            <select className='block w-6/12 border  required' name="Course" value={formValues.Course} onChange={handleChange}>
+            <option value="" disabled selected>--Select--</option>
+                    {
+                      schools.map((val, index)=>{
+                        return (<option value={val.code} key={val.code}>{val.code}</option>)
+                      })
+                    }
             </select>
   </td>
-</tr>
+                  </tr>*/}
 <tr>
   <td className="text-sm text-black px-6 py-4 whitespace-nowrap">
                         <label htmlFor="upload">Upload File</label>
                       </td>
-                      <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
-        
-            <input className='w-40' name="filename" type="file" id="myFile" onChange={(e)=> handleFileAsync(e)} ></input>
-           
+                      <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap text-left ">
+          {/* <div className="field  mb-7 mr-1"> */}
+            {/* <label className='m-2.5'>Course</label>
+            <select className='border border-black' name="Course" value={formValues.Course} onChange={handleChange}> */}
+            <input className='block w-9/12  required inline' name="filename" type="file" id="myFile" onChange={(e)=> handleFileAsync(e)} ></input>
+            {/* </td>
+            <td> */}
             &nbsp;&nbsp;&nbsp;
             <CSVLink {...csvReport} className="text-blue-600 underline">&#10515;Template</CSVLink>
             </td>
+          {/* </div>   */}
+  {/* </td> */}
 </tr>
 
+
+{/* 
+<tr>
+  <td className="text-sm text-black px-6 py-4 whitespace-nowrap">
+                        <label htmlFor="filename">Upload</label>
+                      </td>
+                      <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
+
+          {/* <div className="field  mb-7 ml-12"> */}
+            {/* <label className='m-2.5'>Upload File </label> */}
+            {/* <input className='block w-6/12 border border-black required' name="filename" type="file" id="myFile" onChange={(e)=> handleFileAsync(e)} ></input> */}
+            {/* <input className='border border-black w-52' name="filename" type="file" id="myFile" onChange={(e)=> handleFileAsync(e)} ></input> */}
+            {/* <CSVLink {...csvReport} className="ml-2 text-blue-600 underline underline-offset-1">Template</CSVLink> */}
+          {/* </div>  */}
+        {/* </div> */}
+  {/* </td> */}
+{/* </tr> */}
 
 
         </tbody>
         </table>
 
-        
+        <button className="py-2 font-bold nav-col fluid ui button blue hover:bg-blue-500 text-white w-20 rounded-md mr-8 mt-4">Submit</button>
 
 
 
       </form>
+    {/* </section> */}
 
     </div>
     </div>
-    <div className='flex items-center justify-center'> 
-<button type='submit' className=" nav-col text-sm hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md" >Submit</button>
-</div>
     </div>
     </div>
   )
 }
-
 
 export default InsertStudents;
